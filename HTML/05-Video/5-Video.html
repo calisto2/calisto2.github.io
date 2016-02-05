@@ -1,0 +1,38 @@
+<!DOCTYPE HTML5>
+<html>
+<head>
+<title>Gestion de Multimedia en HTML5: Video</title>
+    <style>
+        header, footer {
+            width:900px;
+            text-align:center;
+        }
+        section {
+            margin-left:200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Ejemplo de Video en HTML5</h1>
+    </header>
+
+ <section>
+    <video width="500"  poster="http://www.agendapais.com/wp-content/uploads/2015/09/taylor-swift.jpg" autoplay  loop controls>
+  
+        <source src="Taylor%20Swift%20-%20Shake%20It%20Off.mp4">
+        <source src="Taylor_Swift_-_Shake_It_Off_PARODY.webm">
+         <track src="TaylorSwift-22.vtt" kind="subtitles" srclang="en" label="English" default>
+         <track src="TaylorSwift-22-es.vtt" kind="subtitles" srclang="es" label="spanish">
+        <track src="chapters.vtt" kind="chapters" srclang="en" />
+            Your browser does not support HTML5 video.
+    </video>
+    </section> 
+    <footer>
+        <p>Video por cortesia de <a href="http://www.vevo.com/" target="_blank">vevo.com</a>.
+        </p>
+	</footer>
+
+    
+</body>
+</html>
