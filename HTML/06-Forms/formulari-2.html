@@ -14,25 +14,58 @@
         
         <section id="izquierda">
             <div id="NomApel1">
-               <input class="NomApe" type="text" size="20"><p>Nombre</p>
-               <input class="NomApe" type="text" size="20"><p>Primer Apellido</p>
-               <input class="NomApe" type="text" size="20"> <p>Segundo Apellidos</p> 
+                <h4 class="especial">Nombre y Apellidos<span class="especial">* </span> <span class="some-element">
+                        boc Lorem Ipsum is simply dummy text.
+                </span></h4>
+                <ul>
+                    <li> <input placeholder="First name" title="This is the text of the tooltip" type="text" size="20" required/><p class="especial">Nombre</p></li>
+                    <li> <input type="text" size="40" required/><p class="especial">Primer Apellido</p></li>
+                    <li> <input type="text" size="40" required   title="Este es un campo requerido." /><p class="especial">Segundo Apellido</p></li>
+               </ul>
             </div>
             <div id="Email">
-             <input class="Email" type="text" size="20">  <p>EMail</p>
+                <h4 class="especial">Email <span class="some-element">
+                        boc Lorem Ipsum is simply dummy text.
+                </span></h4>
+                <ul>
+                    <li> <input  type="email" size="40" /><p class="especial" >Email</p></li>
+                </ul>
             </div>
         </section>
-        
+  <!--  Columna derecha del form     -->      
         <section id="derecha">
             <div id="Direccion">
-             <input type="text" size="20"><p>Calle, número, piso, puerta</p>
-             <input type="text" size="20"><p> Codigo postal </p><input type="text" size="20"> Codigo postal 
-             <input type="text" size="20"><p> Nombre y apellidos2 </p>
+                <h4 class="especial">Dirección<span class="especial">* </span> <span class="some-element">
+                        boc Lorem Ipsum is simply dummy text.
+                </span></h4>
+                <ul>
+                    <li> <input type="text" size="20"/><p class="especial">Calle, número, piso, puerta</p></li>
+                </ul>
+                <ul class="CP">
+                   <li class="CP1"> <input class="especial" type="text" size="20"/><p class="especial">Codigo postal</p></li> 
+                    <li class="CP1"> <input class="especial" type="text" size="20"/><p class="especial">Municipio</p></li>
+                </ul>                    
+                 <ul class="CP">
+                   <li class="CP2"> <input type="text" size="20"/><p class="especial">Provincia</p></li> 
+                   <li class="CP2"> <select class="CP2" name="paises">
+                     <option value="Alemania">Alemania</option>
+                     <option value="Francia">Francia</option>
+                     <option value="España" selected>España</option>
+                     <option value="Gran Bretaña">Gran Bretaña</option></select><p class="especial">País</p></li>                         
+                </ul>
             </div>
+            
             <div id="Telefono">
-               <input type="text" size="20"><p> Nombre y apellidos2</p>
+                <h4  class="especial">Teléfono<span class="especial">* </span><span class="some-element">
+                        boc Lorem Ipsum is simply dummy text.
+                </span></h4>
+                <ul>
+                    <li class="especial2"> <input  type="tel" size="20"><p class="especial">Telefono</p> </li>
+                </ul>
             </div>
         </section>
+        <br><br>
+                <input type="submit" value="Borrar Datos">
      </form>
 
     </BODY>

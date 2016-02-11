@@ -5,25 +5,29 @@
 section {
     display: inline-block;
     border: 2px solid;
-    width: 40%;
-
+    width: 35%;
+    margin-left: 2%;
+    background-color:azure;
 }
 
-section#:hover {
-    background-color: chartreuse;
+li {
+    list-style: none;
+    
 }
-
 input.NomApe:hover {
     background-color: yellow;
 }
 
-input.NomApe:focus {
-      background-color:red;  
+input:focus {
+      background-color:cadetblue;  
+      border: 2px solid yellow;
 }
 
-input.NomApe: {
-      background-color:red;  
+input:invalid {
+
+
 }
+
 
 #NomApel1:hover {
         background-color: blanchedalmond;
@@ -41,6 +45,64 @@ input.NomApe: {
         background-color:blanchedalmond;
 }
 
-p {
-    margin-top:-2px; 
+/* Para mostrar o ocultar texto span al situarse encima las class #NomApel1 #Email #Direccion #Telefono  */
+.some-element {
+ /* border: 5px solid #ccc;  */
+  display: none;
+  font-size: 10px;
+  padding: 5px;
+  color:darkblue;
+  text-transform: uppercase;
 }
+
+#NomApel1:hover  .some-element, #Email:hover .some-element, #Direccion:hover .some-element, #Telefono:hover  .some-element {
+  display:inline;
+
+}
+
+
+p.especial {
+    margin-top:-2px; 
+    font-size:0.84em;
+    font-style:oblique;  
+}
+
+h4.especial {
+    margin-left: 40px;
+    margin-bottom: -14px;
+}
+
+
+li.CP1 {
+     color:red;
+     display:inline-block;
+
+}
+
+li.CP2 {
+     color:green;
+     display:inline-block;
+     margin-top:-16px;
+    margin-bottom: -40px;
+}
+li.especial2 {
+     color:green;
+     display:inline-block;
+     margin-bottom: -50px;
+    
+}
+span.especial {
+    color:red;
+    font-size: 25px;
+    
+    
+}
+
+input[type=submit] {
+    margin-right:25%;
+   float:right;
+}
+
+/* http://www.menucool.com/tooltip/css-tooltip */
+
+/**/
