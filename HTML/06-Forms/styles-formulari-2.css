@@ -1,0 +1,46 @@
+/* Capitulo 11. Formularios
+    http://librosweb.es/libro/css/capitulo_11.html
+*/
+
+section {
+    display: inline-block;
+    border: 2px solid;
+    width: 40%;
+
+}
+
+section#:hover {
+    background-color: chartreuse;
+}
+
+input.NomApe:hover {
+    background-color: yellow;
+}
+
+input.NomApe:focus {
+      background-color:red;  
+}
+
+input.NomApe: {
+      background-color:red;  
+}
+
+#NomApel1:hover {
+        background-color: blanchedalmond;
+}
+
+#Email:hover {
+        background-color: blanchedalmond;
+}
+
+#Direccion:hover {
+        background-color: blanchedalmond;
+}
+
+#Telefono:hover {
+        background-color:blanchedalmond;
+}
+
+p {
+    margin-top:-2px; 
+}
