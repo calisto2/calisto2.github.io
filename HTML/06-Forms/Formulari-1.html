@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<title>Formulario</title>
+<link rel="stylesheet" href="styles-formulari-1.css">
+</HEAD>
+<BODY>
+<HEADER>
+    <H1>Datos del usuario</H1>
+</HEADER>
+ <p> Practica con  formularios en HTML5 y formateo con CSS</p>
+ <div id="formulari">  
+    <FORM  name="formulario1" id="formulario1" action="ejecutar_page.php" method="GET">
+        <!-- los DIV los uso para el label y el input se muevan como una unica unidad y en el css pondremos el
+             formulari como display:block  -->
+        <div>
+           <Label>Nombre: </Label> <input type="text" name="Firstname" size="35"  required>
+        </div>
+        <div>
+           <Label> Apellidos:</Label><input type="text" name="Lastname" size="50">
+         </div>
+        <div>
+           <Label>Edad:</Label> <input type="number" min="1" max="100" name="edad">
+        </div>
+
+        <div>
+            <Label>Correo electronico:</Label> <input type="email" name="mail" size="26"> 
+        </div>
+        <div>   
+            <Label>Telefono:</Label> <input type="tel" name="Telefono">
+         </div>
+        <div>
+             <Label>URL:</Label> <input type="URL" name="URL1"  size="40">
+        </div>
+        <br>
+        <div> 
+             <Label>Fecha Nacimiento:</Label> <input type="Datetime-local"  name="FechaNac">
+        </div>
+        <div>         
+             <Label>Mes favorito:</Label> <input type="Month" name="mes">
+        </div>
+        <div>    
+              <Label>Semana:</Label> <input type="week" name="mes">
+        </div>
+        <br>
+        <div>
+            <fieldset> <legend>Genero:</legend>
+             <input type="radio" name="genero" value="1" checked> Hombre<br>
+             <input type="radio" name="genero" value="2"> Mujer<br>
+             <input type="radio" name="genero" value="3"> Otro<br>
+            </fieldset>
+        </div>
+        <div>
+            <Label>Comentarios:</Label> <br>
+            <textarea 
+                name="comentario" rows="5" cols="30">Escriba sus comentarios.
+            </textarea>
+        </div>
+        <br>
+        
+        <Label>Seleccionar Vehiculo:</Label>
+        <select name="coches">
+         <option value="volvo">Volvo</option>
+         <option value="saab">Saab</option>
+         <option value="fiat" selected>Fiat</option>
+         <option value="audi">Audi</option>
+        </select>
+        
+        <Label>Browser Favorito:</Label>
+          <input list="browsers">
+          <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+          </datalist> 
+        
+        <Label>Buscar datos:</Label>
+        <input type="search" name="googlesearch">
+        <br><br>
+
+        <label >Color favorito: </label><input type="color">
+        <label>Contraseña: </label><input type="password">
+        <label>Poner imagen: </label><input type="file"> 
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Borrar Datos">
+    </div>
+    </FORM>
+    
+</BODY>
+</HTML>

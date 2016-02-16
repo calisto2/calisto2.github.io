@@ -1,92 +1,54 @@
 <!DOCTYPE html>
-<HTML>
-<HEAD>
-<title>Formulario</title>
+<html>
+<head>
+ <base target="_blank">
 <link rel="stylesheet" href="styles.css">
-</HEAD>
-<BODY>
-<HEADER>
-    <H1>Datos del usuario</H1>
-</HEADER>
- <p> Practica con  formularios en HTML5 y formateo con CSS</p>
- <div id="formulari">  
-    <FORM  name="formulario1" id="formulario1" action="ejecutar_page.php" method="GET">
-        <!-- los DIV los uso para el label y el input se muevan como una unica unidad y en el css pondremos el
-             formulari como display:block  -->
-        <div>
-           <Label>Nombre: </Label> <input type="text" name="Firstname" size="35"  required>
-        </div>
-        <div>
-           <Label> Apellidos:</Label><input type="text" name="Lastname" size="50">
-         </div>
-        <div>
-           <Label>Edad:</Label> <input type="number" min="1" max="100" name="edad">
-        </div>
+<title> BoxModel </title>
+<style> 
 
-        <div>
-            <Label>Correo electronico:</Label> <input type="email" name="mail" size="26"> 
-        </div>
-        <div>   
-            <Label>Telefono:</Label> <input type="tel" name="Telefono">
-         </div>
-        <div>
-             <Label>URL:</Label> <input type="URL" name="URL1"  size="40">
-        </div>
-        <br>
-        <div> 
-             <Label>Fecha Nacimiento:</Label> <input type="Datetime-local"  name="FechaNac">
-        </div>
-        <div>         
-             <Label>Mes favorito:</Label> <input type="Month" name="mes">
-        </div>
-        <div>    
-              <Label>Semana:</Label> <input type="week" name="mes">
-        </div>
-        <br>
-        <div>
-            <fieldset> <legend>Genero:</legend>
-             <input type="radio" name="genero" value="1" checked> Hombre<br>
-             <input type="radio" name="genero" value="2"> Mujer<br>
-             <input type="radio" name="genero" value="3"> Otro<br>
-            </fieldset>
-        </div>
-        <div>
-            <Label>Comentarios:</Label> <br>
-            <textarea 
-                name="comentario" rows="5" cols="30">Escriba sus comentarios.
-            </textarea>
-        </div>
-        <br>
-        
-        <Label>Seleccionar Vehiculo:</Label>
-        <select name="coches">
-         <option value="volvo">Volvo</option>
-         <option value="saab">Saab</option>
-         <option value="fiat" selected>Fiat</option>
-         <option value="audi">Audi</option>
-        </select>
-        
-        <Label>Browser Favorito:</Label>
-          <input list="browsers">
-          <datalist id="browsers">
-            <option value="Internet Explorer">
-            <option value="Firefox">
-            <option value="Chrome">
-            <option value="Opera">
-            <option value="Safari">
-          </datalist> 
-        
-        <Label>Buscar datos:</Label>
-        <input type="search" name="googlesearch">
-        <br><br>
-
-        <label >Color favorito: </label><input type="color">
-        <label>Contraseña: </label><input type="password">
-        <label>Poner imagen: </label><input type="file"> 
-        <input type="submit" value="Enviar">
-        <input type="submit" value="Borrar Datos">
-    </div>
-    </FORM>
+</style>    
+</head>
+<body>
+<header>
+        <H1>My Blog about my life</H3>
+</header>
+<nav>
+    <H2>Menu</H2>
+<div id='cssmenu'>
+  <ul>
+   <li class='active'><a href="http://www.google.com"><span>Buscador</span></a></li>
+   <li><a href="'http://cssmenumaker.com/"><span>cssmenumaker</span></a></li>
+   <li><a href="http://rincondeundba.blogspot.com.es/2010_08_01_archive.html"><span>rincondeundba</span></a></li>
+   <li class='last'><a href="../03-cajas.html"><span>cajas3</span></a></li>
+    <li class='last'><a href="http://vagabundia.blogspot.com/2010/06/creando-botones-sencillos-para-un-menu.html"><span>menus css</span></a></li>
+    <li class='last'><a href="http://rogerdudler.github.io/git-guide/index.es.html"><span>Git Maanual</span></a></li>
+  </ul>
+</div>
+</nav>
+<section>  
+        <h2>Meeting with supervisor</h2>
+    <p>14 Dec 2011</p>
+    <p>Today I went to University by bus.</p>
+    <p>I has a met with my tutor</p>
+    <img src="images/boc.jpg"> 
+        <h2>Meeting with supervisor2</h2>
+    <p>14 Dec 2011</p>
+    <p>Today I went to University by bus.</p>
+    <p>I has a met with my tutor</p>
     
-</BODY>
-</HTML>
+        <h2>Meeting with supervisor3</h2>
+    <p>14 Dec 2011</p>
+    <p>Today I went to University by bus.</p>
+    <p>I has a met with my tutor</p>
+
+</section>
+     <footer>
+     <p> mi pie de pagina</p>    
+ </footer>
+ <aside>
+        <p>ndfofdsmlfds g s gf gf gf fg</p>
+        <p>ndfofdsmlfds g s gf gf gf fg</p>
+ </aside>
+
+</body>
+</html>
