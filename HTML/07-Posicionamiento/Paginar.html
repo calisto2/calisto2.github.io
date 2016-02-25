@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio posicionamiento float</title>
+<style type="text/css">
+nav {   /*no hace falta, lo hice por probar algo de posicionamiento */
+position:absolute;
+top:2%;left:10%;       
+width:80%;       
+    }
+div#paginacion {
+ background-color: #E0E0E0;
+ padding: .5em;
+ border: solid;  border-radius: 35px;   /* border redondeado  */
+}  /* usamos el float para situar los anchor a iza. y derecha */
+.derecha {
+ float: right;
+}
+.izquierda {
+  float:left;
+}
+div.clear {
+  clear: both;
+}
+</style>
+</head>
+<body>
+<nav>
+<div id="paginacion">
+   <a href="#"><span class="izquierda">&laquo; Anterior</span> </a>
+   <a href=""><span class="derecha">Siguiente &raquo;</span></a>    
+   <div class="clear"></div>
+</div>
+</nav>
+</body>
+</html>

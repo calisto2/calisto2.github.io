@@ -1,0 +1,43 @@
+
+public class Empleado {
+	private String nom;
+	private int edad;
+	private double sueldo;
+
+	// Constructor por defecto;
+	public Empleado() {
+		
+	}
+	
+	//Metodos get/set
+	
+    public String getNom() {
+    	return nom;
+    }
+    public void setNom(String nombre) {
+    	this.nom = nom;
+    }
+    
+    public int getEdad() {
+    	return edad;
+    }
+    public void setEdad (int edad) {
+    	this.edad = edad;
+    }
+    
+    public double getSueldo() {
+    	return sueldo;
+    }
+    public void setSueldo(double sueldo) {
+    	this.sueldo = sueldo;
+    }
+    
+    // mostrar los datos de un trabajado
+ 
+    public String toString () {
+    	String datos = "empleado: " + nom + " Edad " + edad +
+		" con Sueldo " + sueldo;
+    	return datos;  	
+    }
+    
+} // Fin de la Clase Empleado
