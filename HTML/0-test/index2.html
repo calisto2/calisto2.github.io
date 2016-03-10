@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<script>
+    var cambiocolor;
+/* ******************************************  */
+    function calcularDNI(miNum)
+    {
+        var miVariable = miNum.value;   // recogemos el DNI
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+        var resultado = miVariable % 23;   // el mod  nos proporciona el "resto" para localizaar la letra correcta en el array.
+        miVariable = miVariable + letras[resultado];
+        document.getElementById("mostrar").innerHTML = "El valor final es: " + miVariable;
+    }
+/* ******************************************  */
+    function cambiarcolor() 
+    {
+         cambiocolor = !cambiocolor;  // cambia el estado de la variable boleana cada vez que se ejecuta.
+         if (cambiocolor) {
+            document.getElementById("demo").style.color = "red";
+         }
+        else
+        {
+           document.getElementById("demo").style.color = "blue";
+        }  
+    }
+          //  var dni = prompt("Introduce el número del DNI");   
+     /* var miVariable=Document.getElementsById('ncalculo').value;
+           while (miVariable<100) {
+               miVariable++;
+           }
+       //  alert ("El valor final es: " + miVariable);  */
+/* *************** Array de una dimension ***************************  */    
+    function diasemana(dia) {
+        var mydia =  dia.value;
+        var diassemana =  ["Lunes", "martes", "Miercoles", "Jueves", "Viernes","Sabado","Domingo"];
+        document.getElementById("showdia").innerHTML="el dia es:" + diassemana[mydia];
+      //  alert ("datos: " + diassemana[mydia]);     
+    }
+    
+/* ************** Array de dos dimensiones ****************************  */
+    function ciudades_temperaturas() {
+        var items = [["Madrid",2],["BCN",14],["Paris",6]];
+        items.push("Moscu",1)
+      // alert(items[2][0] + " con temperatura " + items[2][1] + "Cº");
+        document.write ("<p>" + items[3][0] + " con temperatura " + items[2][1] + "Cº" +"</p>");
+  
+    }
+    
+</script>
+<head>
+
+    <title>pruebas de maquetacion</title>
+    <style>
+   /* caja ocupe todo el alto de la pagina: definir height:100% en la etiquetas 
+        html y body
+        y en cada div se puede poner height:100% para que ocupe todo el espacio del contendedor
+    */         
+    html,body{
+    margin:0px;
+    background-color: red;
+    height:100%;
+    }
+        div#contenedor {
+            height: 100%;
+        }
+        aside {
+            width: 15%;
+            height: 123%;
+            background-color: aquamarine;
+            float: left;
+
+        }
+        header {
+            width: 85%;
+            height: 100px;
+            background-color: mediumaquamarine;
+            float: left;
+            text-align: center;     
+        }
+        nav {
+            width: 85%;
+            height: 50px;
+            background-color: cadetblue;
+            float: left;
+        }
+        section {
+            width: 65%;
+            box-sizing:border-box;
+            height: 100%;
+            padding:20px;
+            background-color: gold;
+            float: left;
+        }
+        footer {
+            width: 100%;
+            height: 40px;
+            background-color: green;
+            float: left;
+        }
+        
+        ul#menu-nav, ul#menu-aside {
+            list-style: none;
+        }
+        ul#menu-nav li {
+            display:inline;
+            padding:5%;
+        }
+        
+        ul#menu-aside li {
+            padding: 5%;
+        }
+        
+        #video1 {
+            width: 20%;
+            height: 100%;
+            background-color: darkorchid;
+            display:inline;
+            float: right;
+
+        }
+        img#logo {
+            width: 100%;
+        }
+        
+        form#form1 {
+            padding-left: 10px;
+        }
+        
+        div#form2 {
+            position: relative;
+            top:20px;
+            left:20px;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+<div id="contenedor">  
+    <aside>
+        <img id="logo" src="http://www.consumerqueen.com/wp-content/uploads/2011/10/logo-300x209.png" alt="logo" title="mi logo" >
+        <ul id="menu-aside">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+        <form name="form1" id="form1" action="#" method="post">
+           <label>Buscar:</label><input type=search name="buscar"/>
+        </form>
+
+    </aside>
+    <header>
+        <h1>titulo</h1>
+    </header>
+    <nav>
+        <ul id="menu-nav">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+    </nav>
+    <section>
+        section principal de la pagina
+
+
+        <div id="form2">
+            <form name="form2" id="form2">
+            <label>Calcular letra DNI:</label><input type="number"  id="nDNI"/>
+            
+        </form>
+        <button onclick="calcularDNI(nDNI)">Calcular</button>  <!-- al pulsar ejecutará la funcion para calcular DNI -->
+        <div id="mostrar"></div>
+        </div>
+        <p id="demo"  onmouseover=cambiarcolor()> usando JS el event onmouseover, el texto cambia de color al pasar el texto sobre él.</p>
+   
+         <label>Numero semana:</label><input type="number"  id="nDia" min="0" max="6"/>
+        <button onclick="diasemana(nDia)">Mostrar dia</button>  <!-- al pulsar ejecutará la funcion para mostrar el dia -->
+         <p id ="showdia"></p>
+        <button onclick=ciudades_temperaturas()>Temperaturas</button>  <!-- al pulsar ejecutará la funcion para calcular DNI -->
+    </section> 
+        <div id="video1">
+            <video   width=250px controls autoplay>
+            <source src="Video/Taylor_Swift_-_Shake_It_Off_PARODY.webm"/>
+            <track src="subs.vtt" kind="subtitles"/>
+            </video>
+        </div>
+    <footer>
+        footer
+    </footer>
+</div>
+</body>
+</html>

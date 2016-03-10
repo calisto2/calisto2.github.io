@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>4 casos de overflow</TITLE>
+<STYLE TYPE="text/css">
+    #envoltorio {
+        position: absolute;
+        margin-left: 100px;
+    }
+    #caso1 {
+        margin-top:30px;
+        overflow: visible;
+        width:200px; height:50px;
+    }
+    #caso2 {
+        margin-top:110px;
+        color:green;
+        overflow: auto;
+        width:300px; height:100px;
+    }
+    
+    #caso3 {
+        margin-top:50px;
+        overflow:hidden;
+        width:200px; height:50px;
+                color:chocolate;
+    }
+    #caso4 {
+        margin-top:50px;
+        overflow:scroll;
+        width:300px; height:100px;
+        background-color: aquamarine;
+    }
+    
+</STYLE>  
+</HEAD>
+        <H1>Pruebas con la propiedad overflow</H1>
+<BODY>
+<div id="envoltorio">
+<div id="caso1">
+    <p>Este contenido de una capa con <em>overflow=visible</em> quiere decir que la capa debe crecer hast que todo el contenido dela misma quepa en la caja. veamdodfokfd f fd fd gd g gf gf gf gf gf  gf gf gf gf gf gf  g fg fggf</p>
+</div>
+
+<div id="caso2">
+<pre class="pre">
+ &lthtml&gt
+      &lthead&gt
+        &lttitle>Título de la página</title&gt>
+       &lt/head&gt
+       &ltbody&gt
+         Este código solo muestra este texto que 
+         he escrito entre las etiquetas body.
+       &lt/body&gt 
+    &lt/html&gt
+</pre>
+</div>
+    
+<div id="caso3">
+  <p>Esta capa tiene un contenido mayor del que cabe en el espacio que he asignado con el desplazamiento vertical.</p>  
+</div>
+    
+<div id="caso4">
+    <p>Con overflow scroll salen las barras aunque el texto quepa bien.</p>
+</div>
+
+</BODY>
+</HTML>

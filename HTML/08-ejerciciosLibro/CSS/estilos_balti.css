@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* id # contenedor del body   */
+#principal {
+    background-color: rgb(153,204,153);
+    width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+#cabecera_pagina {
+    background-color: #99cc00;
+    overflow: hidden;
+}
+/* Barra de navegación cabecera*/
+#barra {
+    background-color: #ff6600;
+    height: 50px;
+    padding: 5px;
+}
+#barra ul li:nth-child(1) {
+    background-color: #ffffff;
+}
+#barra ul li:nth-child(2) {
+    background-color: #cccccc;
+}
+#barra ul li:nth-child(3) {
+    background-color: #999999;
+}
+#barra ul li{
+    display: inline;
+    margin: 10px;
+    background-color: #e4e4e4;
+    padding: 5px;
+}
+header:not(#cabecera_pagina) {
+    background-color: rgba(255,255,255,0.3);
+}
+/* Vínculos*/
+a:link {
+    color: green;
+}
+a:visited {
+    color: blue;
+}
+a:hover {
+    color: red;
+}
+a:active {
+    color:yellow;
+}
+
+/* Artículos */
+#blog {
+    margin: 0px 5px 5px 10px;
+    width: 760px;
+    background-color: rgba(250,250,250,.7);
+    float: left;
+}
+#posts{
+    margin: 0px 10px 5px 5px;
+    width: 210px;
+    height: 500px;
+    background-color: rgba(250,250,250,.7);
+    float: left;
+}
+
+#formulario {
+    background-image: url("../Imagenes/Teclas.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+}
+#formulario  p, fieldset {
+    background-color: rgba(250,250,250,.5);
+}
+
+
+#sobreContxita img {
+    margin: 10px;
+    float: left;
+}
+
+#sobreContxita aside {
+    width:770px;
+    height:226px;
+    margin: 10px 10px 10px 0px;
+    float:left;
+}
+
+footer{
+   background-color:rgba(0, 80, 250, .7);
+   margin-top:5px;
+   width:1000px;
+   height:50px;
+   float:left;
+  }
+  
+
+
+/*article p:nth-of-type(odd) {
+    background-color: rgba(250,250,250,0.7);   
+   }
+article p:nth-of-type(even) {
+    background-color: rgba(250,250,250,0.5);   
+   }
+*/
+
+

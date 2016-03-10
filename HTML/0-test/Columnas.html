@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <title>pruebas de maquetacion</title>
+    <style>
+   /* caja ocupe todo el alto de la pagina: definir height:100% en la etiquetas 
+        html y body
+        y en cada div se puede poner height:100% para que ocupe todo el espacio del contendedor
+    */         
+    html,body{
+    margin:0px;
+    background-color: red;
+    height:100%;
+    }
+        div#contenedor {
+            height: 100%;
+        }
+     
+        aside {
+            width: 15%;
+            height: 100%;
+            float:left;
+            
+        }
+        header {
+            width:75%;
+            float: left;
+        }
+        nav {
+            width:75%;
+            float:left;
+        }
+        section {
+            width:75%;
+            float: left;
+        }
+        footer {
+            width:100%;
+            float: left;
+        }
+        
+        ul#menu-nav {
+            list-style: none;
+        }
+        ul#menu-nav li {
+            display:inline;
+            padding:5%;
+        }
+        
+        div#col1 {
+            width:15%;
+            float: left;
+        }
+        div#col2 {
+            width:15%:
+            float: left;
+        }
+        div#col3 {
+            width:20%;
+            float: left;
+        }
+        div#clear {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<div id="contenedor">  
+    <aside>
+        <img id="logo" src="http://www.consumerqueen.com/wp-content/uploads/2011/10/logo-300x209.png" alt="logo" title="mi logo" >
+        <ul id="menu-aside">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+        <form name="form1" id="form1" action="#" method="post">
+            <label>Buscar:</label><input type=search name="buscar"/>
+        </form>
+    </aside>
+    <header>
+        <h1>titulo</h1>
+    </header>
+    <nav>
+        <ul id="menu-nav">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+        </ul>
+    </nav>
+    <section>
+        section principal de la pagina
+        <div id="video1">
+            <video   width=250px controls autoplay>
+            <source src="Video/Taylor_Swift_-_Shake_It_Off_PARODY.webm"/>
+            <track src="subs.vtt" kind="subtitles"/>
+            </video>
+        </div>
+
+    </section> 
+    <footer>
+        footer
+    </footer>
+<div id="clear"></div>
+    <div id="col1">
+    columna1 dfddffdfd   fd d  fd fd fd f f g  gf fg fg f  fg fg fg fg fg  f
+        
+        fd
+        fd
+        
+    </div>
+
+        <div id="col2">
+     columan2 columan2 a  a    b b b  b b b b  b b b  b b b b  b dfddffdfd   fd d  fd fd fd f f g  gf fg fg f  fg fg fg fg fg  f
+        
+        fd
+        fd
+        
+    </div>
+
+    <div id="col3">
+    columna3 cc c c c  c  cc ccccc c c  c c c c c c c  cdfddffdfd   fd d  fd fd fd f f g  gf fg fg f  fg fg fg fg fg  f
+        
+        fd
+        fd
+        
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
