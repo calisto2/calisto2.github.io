@@ -16,9 +16,9 @@ if (($login=='admin')&&($pass=='admin')) {
 }
 else
 {
-    if (($login=='alum') && ($pass=='111')) {
-//    $_SESSION['user']=$login;
-    header("location:user.html"); 
+    if (($login=='alum') && ($pass!=null)) {
+     $_SESSION['alum']=$login;
+    header("location:alumne.php"); 
     }
         else {
             header("location:index.html"); 
