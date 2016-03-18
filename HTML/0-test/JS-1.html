@@ -1,0 +1,136 @@
+<html>
+<header>
+
+</header>
+<body>
+    
+    <p id="demo"> </p>  
+    
+    
+ <script>
+    
+    function fechaFormato(fecha) {
+    /*
+      Dada una fecha en formato 11/03/2016 devolver: Viernes, 11 de Marzo del año 2016.
+      Solucion: usaremos funciones de cadenas y dos arrays para  meses y semanas. 
+                con Substr cogemos las diferentes partes de la fecha que 
+       ......
+    */
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre', 'Novembre', 'Diciembre']
+    var semana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];  
+
+    var dia = fecha.substr(0,2);
+    var mes = parseInt(fecha.substr(3,2))-1;   // se resta -1 por la busqueda en el array se empieza po cero.
+    var ano = fecha.substr(6,4);
+    
+    ///////// Convert dd/mm/yyyy string to date ///////////
+    var from =fecha.split("/");
+    var f = new Date(from[2], from[1] - 1, from[0]);  ////
+    //////////////////////////////////////////////////////
+    /// Para testearlo
+    //alert (from);
+    //alert (f);
+    var ndia = f.getDay();   // conseguir el dia de la semana
+    var resultado = semana[ndia] + ", " + dia + " de " + months[mes] + " del año " + ano
+
+    return resultado;   
+    }  /*  fin de la rutina fechaFormato()  */
+    
+alert (fechaFormato( '19/03/2016'));
+    
+    /*--------------------------------------------------------------------------------------
+     function isPalindromo(cadena): determina si la cadena de texto que se le pasa como parámetro 
+    es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la derecha.
+    Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".
+    ----------------------------------------------------------------------------------------*/
+    function isPalindromo(cadena) {
+              //  var letrasReves = cadena.split("").reverse().join("");
+        // convierto en minusculas
+          cadena = cadena.toLowerCase();
+          // convierto en array
+          var letrasEspacios = cadena.split("");
+
+          // eliminar espacios en blanco
+          var cadenaSinEspacios = "";
+          for (i in letrasEspacios){
+            if(letrasEspacios[i] != " "){
+              cadenaSinEspacios += letrasEspacios[i];
+            }
+          }
+
+          var letras = cadenaSinEspacios.split("");
+          var letrasReves = cadenaSinEspacios.split("").reverse();
+          var igual = true;
+
+          for(i in letras){
+            if (letras[i] != letrasReves[i]){
+              igual = false;
+              break;
+            }
+            else{
+              igual = true;
+            }      
+          }
+        
+         return igual;
+    } /*  fin de la rutina isPalindromo  */
+     
+ /*--------------------testeo   --------------------------    
+   var ver = isPalindromo('La ruta nosaportootropasonatural');
+   alert (ver); 
+   alert ( isPalindromo('Hello kity'));    
+   ------------------------------------------------------*/
+    
+
+     function mayor() {
+        var i;
+        var max = arguments[0];
+        for (i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }
+        }
+        return max;
+    }
+     /*--------------------------------------------------------------------------------------
+    Function findmaxMin: Devuelve el Max y el Min de una lista de valores. usamos argument la lista de valores 
+    se puede pasar como parametros puede variar.
+    ----------------------------------------------------------------------------------------*/   
+    function findMaxMin() {
+        var i;
+        var max = arguments[0];
+        var min = arguments[0];
+        for (i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i];
+            }  
+            if (arguments[i] < min) {
+                min = arguments[i];
+            }  
+        }    
+        cadena = "El mayor es el " + max + " y el " + min + " el menor."
+        return  cadena;       
+    }   /*  fin de la rutina FinMaxMin()  */
+    
+ document.getElementById("demo").innerHTML = findMaxMin(4, 5, 6, 9, 29,2);
+    
+  //  alert (findMaxMin(4, 5, 6, 9, 19));
+    
+     /*----------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------*/
+    
+    
+    funcion actividadesSemana() {
+            var agenda = [['lunes', 'martes', 'miercoles'], ['estudiar', 'Pasear', 'Leer']]; 
+            alert (agenda [[1][0]]);
+    }
+actividadesSemana();
+    
+    
+</script>   
+</body>
+    
+</html>

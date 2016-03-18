@@ -6,8 +6,8 @@
     function calcularDNI(miNum)
     {
         var miVariable = miNum.value;   // recogemos el DNI
-        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
-        var resultado = miVariable % 23;   // el mod  nos proporciona el "resto" para localizaar la letra correcta en el array.
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+        var resultado = miVariable % 23;   // el mod  nos proporciona el "resto" para localizar la letra correcta en el array.
         miVariable = miVariable + letras[resultado];
         document.getElementById("mostrar").innerHTML = "El valor final es: " + miVariable;
     }
@@ -40,12 +40,79 @@
 /* ************** Array de dos dimensiones ****************************  */
     function ciudades_temperaturas() {
         var items = [["Madrid",2],["BCN",14],["Paris",6]];
-        items.push("Moscu",1)
+        items.push(["Londres",2])    // añadir nuevo elemento al array multidimensional
       // alert(items[2][0] + " con temperatura " + items[2][1] + "Cº");
-        document.write ("<p>" + items[3][0] + " con temperatura " + items[2][1] + "Cº" +"</p>");
-  
+        document.write ("<p>" + items[3][0] + " con temperatura " + items[3][1] + "Cº" +"</p>");
     }
     
+/*----------------------------------------------------------------------
+
+
+
+------------------------------------------------------------------------*/
+    
+    
+    funcion actividadesSemana() {
+            var agenda = [['lunes', 'martes', 'miercoles'], ['estudiar', 'Pasear', 'Leer']]; 
+            alert (agenda [[1][0]]);
+    }
+actividadesSemana();
+    
+    
+funcion parImpar(num) {
+      
+    if (num % 2 != 0 {
+        return 'impar';
+        }
+     else {
+        return 'par';
+        }
+  }  /* fin rutina parImpar(num) */
+  
+    function tipoCadena(cadena) {
+        
+        if (cadena==cadena.toUpperCase()) {
+            return "La cadena solo contiene mayusculas";
+        }
+        
+        if (cadena==cadena.toLowerCase()) {
+            return "La cadena solo contiene minusculas";
+        }
+        else {
+            return "La cadena contiene mezcla de mayusculas y minusculas";
+        }
+    }
+    
+function fechaFormato(fecha) {
+    /*
+      Dada una fecha en formato 11/03/2016 devolver: Viernes, 11 de Marzo del año 2016.
+      Solucion: usaremos funciones de cadenas y dos arrays para  meses y semanas. 
+                con Substr cogemos las diferentes partes de la fecha que 
+       ......
+    */
+    var months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio','Julio', 'Agosto', 'Septiembre', 'Octubre', 'Novembre', 'Diciembre']
+    var semana = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];  
+
+    var dia = fecha.substr(0,2);
+    var mes = parseInt(fecha.substr(3,2))-1;   // se resta -1 por la busqueda en el array se empieza po cero.
+    var ano = fecha.substr(6,4);
+    
+    ///////// Convert dd/mm/yyyy string to date ///////////
+    var from =fecha.split("/");
+    var f = new Date(from[2], from[1] - 1, from[0]);
+    //////////////////////////////////////////////////////
+    /// Para testearlo
+    //alert (from);
+    //alert (f);
+    var ndia = f.getDay();   // conseguir el dia de la semana
+    var resultado = semana[ndia] + ", " + dia + " de " + months[mes] + " del año " + ano
+
+    return resultado;   
+    }  /*  fin de la rutina fechaFormato()  */
+    
+   alert (fechaFormato( '16/03/2016'));
+
+        
 </script>
 <head>
 
@@ -176,7 +243,7 @@
         </div>
         <p id="demo"  onmouseover=cambiarcolor()> usando JS el event onmouseover, el texto cambia de color al pasar el texto sobre él.</p>
    
-         <label>Numero semana:</label><input type="number"  id="nDia" min="0" max="6"/>
+         <label>Numero dia semana:</label><input type="number"  id="nDia" min="0" max="6"/>
         <button onclick="diasemana(nDia)">Mostrar dia</button>  <!-- al pulsar ejecutará la funcion para mostrar el dia -->
          <p id ="showdia"></p>
         <button onclick=ciudades_temperaturas()>Temperaturas</button>  <!-- al pulsar ejecutará la funcion para calcular DNI -->
