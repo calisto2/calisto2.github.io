@@ -1,4 +1,5 @@
 <?php
+/*
 session_start();
 if  ($_SESSION['admin']!=null) {
   echo "Hola estas en la session:  ".$_SESSION['admin'];
@@ -6,6 +7,9 @@ if  ($_SESSION['admin']!=null) {
 else {
        header("location:index.html"); 
 }
+
+*/
+include "session_admin.php";
 /*----------------- -----------------------  
 echo "<br><a href='admin.php' > Atras </a><br>";
 echo "<a href='discon.php' > Desconectar </a>";

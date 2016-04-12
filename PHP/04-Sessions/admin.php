@@ -1,14 +1,5 @@
 <?php
-session_start(); 
-// controla de que la session sea correcta y que existe. Para que no pueda entrar cualquiera.
-if ($_SESSION['admin']!=null)   // comprueba que la session no sea nula       
-{  // si es corrrecto
-    echo "Hola estas en la session:  ".$_SESSION['admin'];
-}
-else 
-{
-    header("location:index.html");    
-}
+
 
 /*----- cambiado el codigo de direccionar a las paginas para que 
          se efectue desde la parte HTML en vez de entro del php.

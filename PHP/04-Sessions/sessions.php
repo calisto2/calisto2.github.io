@@ -7,6 +7,8 @@ session_start();   // activar sistema de sessiones y  debe ser la primera instru
 $login=$_GET['login'];
 $pass=$_GET['pass'];
 
+$categoria = 0;   // tipo de usuario: 0 alumne  -  1 admin
+
 /*  --- conectar con la bbddd ---- */
 $servername = "localhost";
 $username = "root";
@@ -25,17 +27,50 @@ echo "Connected successfully ";
 $ssql= "select * from usuarios where login='".$login."'" . " and password='".$pass."'";
 echo $ssql;
 //echo $ssql[0];
-
 $consulta= $conn->query($ssql);
-
 echo "<br>";
-while ($fila = $consulta->fetch_array(MYSQLI_NUM))
-       {
+
+//echo "num. de filas encontradas: ".mysqli_num_rows($consulta);
+
+/*---------------------------------------------
+//***** validamos los datos con la BBDD *******
+----------------------------------------------*/
+  if(mysqli_num_rows($consulta)>0) {   // En caso que devuelva algún registro es que existe el usuario. 
+      while ($fila = $consulta->fetch_array(MYSQLI_BOTH))  /* MYSQLI_BOTH: array numérico y asociativo a escoger*/
+       { 
+/*
            echo $fila[0];
            echo "<br>";
             echo $fila[1];
            echo "<br>";
-       }
+           echo $fila[2];
+           echo "<br>";
+*/
+           $categoria = $fila["categoria"];   // recoger categoria de usuario
+       }   
+      $_SESSION['usuario']=$login;
+      // echo "categoria ".$categoria;
+    // Asignamos la session que correponda y le direcciona a la pagina correspondiente.
+        switch ($categoria) {
+          case "0":
+          //    $_SESSION['usuario']=$login;
+              $_SESSION['categoria']= $categoria;
+              header("location:alumne.php"); 
+              break;
+          case "1":
+           //   $_SESSION['admin']=$login;
+              $_SESSION['categoria']= $categoria;
+              header("location:admin.php");
+               break;
+          default:
+              header("location:index.html");    
+      }
+
+  }
+ else {  // Usuario No encontrado
+   header("location:index.html");  
+ }
+
 
 
 
